@@ -1,7 +1,7 @@
 public class Recursion {
     public static void main(String[] args) {
         System.out.println(factorialOfANumber(5));
-        fibonacciSeries(0, 1, 30);
+        fibonacciSeries(0, 1, 20);
         System.out.println();
         System.out.println(raisedPowerOfAnyNumber(2, 6));
         System.out.println(raisedPowerOfAnyNumberTwo(2,1));

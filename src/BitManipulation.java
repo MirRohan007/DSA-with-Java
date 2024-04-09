@@ -1,14 +1,6 @@
 import java.util.Scanner;
 
 public class BitManipulation {
-    public static void main(String[] args) {
-        isPowerOfTwo();
-        toggleBitOfSpecifiedPosition();
-        numberOfOnesInBinaryRepresentation();
-        decimalToBinary();
-        binaryToDecimal();
-    }
-
     public static void isPowerOfTwo(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
@@ -67,12 +59,13 @@ public class BitManipulation {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        int k = n;
         StringBuilder b = new StringBuilder();
         while(n != 0){
             b.insert(0,n%2);
             n = n/2;
         }
-        System.out.println("Binary representation of "+n+" is:");
+        System.out.println("Binary representation of "+k+" is:");
         System.out.println(b);
     }
 
@@ -84,11 +77,18 @@ public class BitManipulation {
         int j = 0;
         for (int i = n.length()-1; i >=0; i--) {
             int bit = Character.getNumericValue(n.charAt(i));
-            System.out.println(bit);
             sum += bit<<j;
             j++;
         }
         System.out.println("Decimal representation of "+n+" is:");
         System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+        isPowerOfTwo();
+        toggleBitOfSpecifiedPosition();
+        numberOfOnesInBinaryRepresentation();
+        decimalToBinary();
+        binaryToDecimal();
     }
 }
